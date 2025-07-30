@@ -1,3 +1,6 @@
 mpi4py
 pandas
 notebook
+seaborn
+matplotlib
+numpy
