@@ -16,26 +16,25 @@ docker run -it -p 8888:8888 -v "$PWD":/app stressme_with_dynamicme
 
 ### To Run dynamicME 
 5. Modify `config_dynamicME.yaml`as needed 
-- **Important:** Change project_name to avoid overwriting the demo
+  - **Important:** Change project_name to avoid overwriting the demo
+  - *Optional:* Time, timestep, volume, mass, media concentration, uptake rates
 ```yaml
 project_name: 'demo' # change to avoid overwriting the demo results
 ```
-- *Optional:* Time, timestep, volume, mass, media concentration, uptake rates
-
 
 6. Run from command line
 ```bash
 python3 run_dynamicme.py config_dynamicME.yaml
 ```
-Results and config file saved to run_dynamicme_results/{project_name}/
+  Results and config file saved to run_dynamicme_results/{project_name}/
 
 7. Visualize the results using `figures_dynamicme.ipynb`
-- Plot growth rate and yield
-- Plot biomass composition
-- Plot tracked metabolite concentrations (demo --> media composition)
-- Plot protein translation rates
-- Plot complex formation rates
-- Plot proteome distribution (ProteoMap/Voronoi)
+  - Plot growth rate and yield
+  - Plot biomass composition
+  - Plot tracked metabolite concentrations (demo --> media composition)
+  - Plot protein translation rates
+  - Plot complex formation rates
+  - Plot proteome distribution (ProteoMap/Voronoi)
 
 ### To Run stressME 
 8. Modify `config_stressME.yaml` as needed
