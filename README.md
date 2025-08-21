@@ -16,8 +16,8 @@ docker run -it -p 8888:8888 -v "$PWD":/app stressme_with_dynamicme
 
 ### To Run dynamicME 
 5. Modify `config_dynamicME.yaml`as needed 
-  - **Important:** Change project_name to avoid overwriting the demo
-  - *Optional:* Time, timestep, volume, mass, media concentration, uptake rates
+    - **Important:** Change project_name to avoid overwriting the demo
+    - *Optional:* Time, timestep, volume, mass, media concentration, uptake rates
 ```yaml
 project_name: 'demo' # change to avoid overwriting the demo results
 ```
