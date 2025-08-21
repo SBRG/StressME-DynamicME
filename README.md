@@ -24,7 +24,8 @@ project_name: 'demo' # change to avoid overwriting the demo results
 6. Open terminal in Jupyter  
 <img src="assets/open_terminal.jpg" alt="Open new terminal" width="300"/>
 
-7. Run from command line
+7. Run from command line (/app #)
+
 ```bash
 python3 run_dynamicme.py config_dynamicME.yaml
 ```
@@ -46,7 +47,7 @@ python3 run_dynamicme.py config_dynamicME.yaml
 project_name: 'demo' # change to avoid overwriting the demo results
 ```
 
-10. Run from command line
+10. Run from command line (/app #)
 ```bash
 python3 run_stressme.py config_stressME.yaml
 ```
@@ -54,3 +55,4 @@ python3 run_stressme.py config_stressME.yaml
 
 11. Visualize the results using `figures_stressme.ipynb`
     - Plot proteome distribution (ProteoMap/Voronoi)
+<img src="assets/voronoi_acetate.jpg" alt="Open new terminal" width="500"/>
