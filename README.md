@@ -16,13 +16,13 @@ docker run -it -p 8888:8888 -v "$PWD":/app stressme_with_dynamicme
 
 ### To Run dynamicME 
 5. Modify `config_dynamicME.yaml`as needed 
-    - **Important:** Change project_name to avoid overwriting the demo
+    - **Important:** Change project_name
     - *Optional:* Time, timestep, volume, mass, media concentration, uptake rates
 ```yaml
 project_name: 'demo' # change to avoid overwriting the demo results
 ```
 6. Open terminal in Jupyter  
-    - <img src="assets/open_terminal.jpg" alt="Open new terminal" width="300"/>
+    <img src="assets/open_terminal.jpg" alt="Open new terminal" width="300"/>
 
 7. Run from command line (/app #)
     - Results and config file saved to run_dynamicme_results/{project_name}/
@@ -41,7 +41,7 @@ python3 run_dynamicme.py config_dynamicME.yaml
 
 ### To Run stressME 
 9. Modify `config_stressME.yaml` as needed
-    - **Important:** Change project_name to avoid overwriting the demo
+    - **Important:** Change project_name 
     - *Optional:* Modify stresses & substrates
 ```yaml
 project_name: 'demo' # change to avoid overwriting the demo results
