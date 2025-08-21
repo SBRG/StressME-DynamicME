@@ -22,14 +22,14 @@ docker run -it -p 8888:8888 -v "$PWD":/app stressme_with_dynamicme
 project_name: 'demo' # change to avoid overwriting the demo results
 ```
 6. Open terminal in Jupyter  
-<img src="assets/open_terminal.jpg" alt="Open new terminal" width="300"/>
+    - <img src="assets/open_terminal.jpg" alt="Open new terminal" width="300"/>
 
 7. Run from command line (/app #)
-
+    - Results and config file saved to run_dynamicme_results/{project_name}/
 ```bash
 python3 run_dynamicme.py config_dynamicME.yaml
 ```
-    - Results and config file saved to run_dynamicme_results/{project_name}/
+  
 
 8. Visualize the results using `figures_dynamicme.ipynb`
     - Plot growth rate and yield
@@ -48,11 +48,12 @@ project_name: 'demo' # change to avoid overwriting the demo results
 ```
 
 10. Run from command line (/app #)
+    - Results and config file saved to run_stressme_results/{project_name}/
+
 ```bash
 python3 run_stressme.py config_stressME.yaml
 ```
-    - Results and config file saved to run_stressme_results/{project_name}/
 
 11. Visualize the results using `figures_stressme.ipynb`
     - Plot proteome distribution (ProteoMap/Voronoi)
-<img src="assets/voronoi_acetate.jpg" alt="Open new terminal" width="500"/>
+    - <img src="assets/voronoi_acetate.jpg" alt="Open new terminal" width="500"/>
