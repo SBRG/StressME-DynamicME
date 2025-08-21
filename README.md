@@ -26,27 +26,29 @@ project_name: 'demo' # change to avoid overwriting the demo results
 ```bash
 python3 run_dynamicme.py config_dynamicME.yaml
 ```
-  Results and config file saved to run_dynamicme_results/{project_name}/
+    - Results and config file saved to run_dynamicme_results/{project_name}/
 
 7. Visualize the results using `figures_dynamicme.ipynb`
-  - Plot growth rate and yield
-  - Plot biomass composition
-  - Plot tracked metabolite concentrations (demo --> media composition)
-  - Plot protein translation rates
-  - Plot complex formation rates
-  - Plot proteome distribution (ProteoMap/Voronoi)
+    - Plot growth rate and yield
+    - Plot biomass composition
+    - Plot tracked metabolite concentrations (demo --> media composition)
+    - Plot protein translation rates
+    - Plot complex formation rates
+    - Plot proteome distribution (ProteoMap/Voronoi)
 
 ### To Run stressME 
 8. Modify `config_stressME.yaml` as needed
-- Change project_name to avoid overwriting the demo
-- Modify stresses
-- Modify substrates
+    - **Important:** Change project_name to avoid overwriting the demo
+    - *Optional:* Modify stresses & substrates
+```yaml
+project_name: 'demo' # change to avoid overwriting the demo results
+```
 
 9. Run from command line
 ```bash
 python3 run_stressme.py config_stressME.yaml
 ```
-Results and config file saved to run_stressme_results/{project_name}/
+    - Results and config file saved to run_stressme_results/{project_name}/
 
 10. Visualize the results using `figures_stressme.ipynb`
-- Plot proteome distribution (ProteoMap/Voronoi)
+    - Plot proteome distribution (ProteoMap/Voronoi)
