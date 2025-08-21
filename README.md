@@ -55,5 +55,4 @@ python3 run_stressme.py config_stressME.yaml
 ```
 
 11. Visualize the results using `figures_stressme.ipynb`
-    - Plot proteome distribution (ProteoMap/Voronoi)
-    - <img src="assets/voronoi_acetate.jpg" alt="Open new terminal" width="500"/>
+    - Plot proteome distribution (ProteoMap/Voronoi) <img src="assets/voronoi_acetate.jpg" alt="Open new terminal" width="500"/>
