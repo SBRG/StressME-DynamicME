@@ -1,10 +1,50 @@
 # Instructions:
-1. From the root of the unzipped folder (where the Dockerfile is), build the docker image by running: 
+1. Clone or Download the Repository
+```bash
+git clone https://github.com/arjunpatel96/StressME-DynamicME-PNNL
+```
+2. Copy the files to the root of the StressME-DynamicME folder
+
+3. From the root of the StressME-DynamicME folder (where the Dockerfile and new scripts are), build the docker image by running: 
 ```bash
 docker build -t stressme_with_dynamicme .
 ```
-2. Still in the same folder/terminal, start the container with:
+4. Still in the same folder/terminal, start the container with:
 ```bash
-docker run -it -p 5000:5000 -v "$PWD":/app stressme_with_dynamicme
+docker run -it -p 8888:8888 -v "$PWD":/app stressme_with_dynamicme
 ```
-3. Open a browser and go to http://localhost:5000
+5. Open a browser and go to http://localhost:8888
+
+
+### To Run dynamicME 
+6. Modify config_dynamicME.yaml as needed
+- Change project_name to avoid overwriting the demo
+
+7. Run from command line
+```bash
+python3 run_dynamicme.py config_dynamicME.yaml
+```
+Results and config file saved to run_dynamicme_results/{project_name}/
+
+8. Visualize the results using figures_dynamicme.ipynb
+- Plot growth rate and yield
+- Plot biomass composition
+- Plot tracked metabolite concentrations (demo --> media composition)
+- Plot protein translation rates
+- Plot complex formation rates
+- Plot proteome distribution (ProteoMap/Voronoi)
+
+### To Run stressME 
+9. Modify config_stressME.yaml as needed
+- Change project_name to avoid overwriting the demo
+- Modify stresses
+- Modify substrates
+
+10. Run from command line
+```bash
+python3 run_stressme.py config_stressME.yaml
+```
+Results and config file saved to run_stressme_results/{project_name}/
+
+11. Visualize the results using figures_stressme.ipynb
+- Plot proteome distribution (ProteoMap/Voronoi)

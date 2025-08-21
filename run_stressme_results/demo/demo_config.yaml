@@ -1,0 +1,54 @@
+project_root: /app  # for Docker compatibility
+project_results_folder: run_stressme_results
+project_name: 'demo' # change to your own run
+
+model_file: FoldME_Ali_keff.pickle
+
+# Simulation parameters
+temperature: 37
+pH: 7.0
+ROS: 1.0
+unmodeled_protein_fraction: 0.1
+
+# Keff updates (dictionary)
+updated_dxr_keff:
+  DXPRIi_FWD_DXPREDISOM-CPLX_mod_cobalt2: 88.72
+
+
+# ROS substrate dictionary (optional, can add more species)
+ros_substrate_dict:
+  h2o2_c: 5e-08
+  o2s_c: 2e-10
+  # h2o2_e: 1.5e-06
+  # o2s_e: 0
+  # pq2_c: 0.0
+
+
+exchange_bounds:
+  EX_glc__D_e: 0     # Glucose (closed)
+  EX_ac_e: -1000    # Acetate (open)
+  EX_malt_e: 0            # Maltose (closed)
+  EX_lcts_e: 0            # Lactose (closed)
+  EX_gal_e: 0             # Galactose (closed)
+  EX_fru_e: 0             # Fructose (closed)
+  EX_sbt__D_e: 0          # Sorbitol (closed)
+  EX_man_e: 0             # Mannose (closed)
+  EX_arab__L_e: 0         # Arabinose (closed)
+  EX_glyc_e: 0            # Glycerol (closed)
+  EX_xyl__D_e: 0          # Xylose (closed)
+  EX_rib__D_e: 0          # Ribose (closed)
+  EX_pyr_e: 0             # Pyruvate (closed)
+  EX_succ_e: 0            # Succinate (closed)
+  EX_fum_e: 0             # Fumarate (closed)
+  EX_mal__L_e: 0          # L-Malate (closed)
+  EX_mal__D_e: 0          # D-Malate (closed)
+  EX_akg_e: 0             # α-Ketoglutarate (closed)
+  EX_cit_e: 0             # Citrate (closed)
+
+# Simulation options
+warm_start: true
+basis_file: basis.npy
+mu_precision: 1e-4
+
+# Output
+output_prefix: StressME_heatevolved

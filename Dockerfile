@@ -53,6 +53,6 @@ RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 # Expose Jupyter Notebook port
-EXPOSE 5000
+EXPOSE 8888
 
-CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=5000", "--no-browser", "--allow-root", "--NotebookApp.token=''", "--NotebookApp.password=''"]
+CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root", "--NotebookApp.token=''", "--NotebookApp.password=''"]

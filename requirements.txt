@@ -4,3 +4,7 @@ notebook
 seaborn
 matplotlib
 numpy
+pyyaml
+requests
+biopython
+tqdm
