@@ -22,7 +22,7 @@ docker run -it -p 8888:8888 -v "$PWD":/app stressme_with_dynamicme
 project_name: 'demo' # change to avoid overwriting the demo results
 ```
 6. Open terminal in Jupyter  
-![Open new terminal](assets/select_new_terminal.jpg)
+<img src="assets/select_new_terminal.jpg" alt="Open new terminal" width="300"/>
 
 7. Run from command line
 ```bash
