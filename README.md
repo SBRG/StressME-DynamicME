@@ -18,10 +18,45 @@ docker run -it -p 8888:8888 -v "$PWD":/app stressme_with_dynamicme
 5. Modify config_dynamicME.yaml as needed
 - Change project_name to avoid overwriting the demo
 ```yaml
-exchange_bounds:
-  EX_glc__D_e: -1000
-  EX_ac_e: 0
-  EX_cit_e: 0
+project_root: /app  # so that you can save files from the docker image
+project_results_folder: run_dynamicme_results
+project_name: 'demo' # change to your own project to avoid overwriting the demo results
+model_file: FoldME_Ali_keff.pickle
+output_file: dynamicme_output_eddie.csv
+
+T: 10 # 10 #simulation length (hours)
+dt: 0.1 #time step (hours)
+V: 1.0 # volume (Liters)
+X0: 0.00675 #mass (grams)
+
+#initial media concentrations
+c0_dict:
+  glc__D_e: 0.4
+  lac__L_e: 0.4
+  malt_e: 0.4
+  gal_e: 0.4
+  glyc_e: 0.4
+  ac_e: 0.0
+
+#Max Uptake Rates
+LB_EX: -10.0
+LB_O2: -20.0
+
+#track media composition
+tracked_metabolites: 
+  - ac_p
+  - gal_p
+  - glc__D_p
+  - glyc_p
+  - lac__L_p
+  - malt_p
+
+#track translation rates
+tracked_translation_reactions: true
+#track biomass composition
+tracked_biomass_to_biomass_reactions: true
+#track complex formation reactions
+tracked_complex_formation_reactions: true
 ```
 
 6. Run from command line
