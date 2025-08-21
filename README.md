@@ -17,6 +17,12 @@ docker run -it -p 8888:8888 -v "$PWD":/app stressme_with_dynamicme
 ### To Run dynamicME 
 5. Modify config_dynamicME.yaml as needed
 - Change project_name to avoid overwriting the demo
+```yaml
+exchange_bounds:
+  EX_glc__D_e: -1000
+  EX_ac_e: 0
+  EX_cit_e: 0
+```
 
 6. Run from command line
 ```bash
