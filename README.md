@@ -21,14 +21,16 @@ docker run -it -p 8888:8888 -v "$PWD":/app stressme_with_dynamicme
 ```yaml
 project_name: 'demo' # change to avoid overwriting the demo results
 ```
+6. Open terminal in Jupyter  
+![Open new terminal](assets/select_new_terminal.jpg)
 
-6. Run from command line
+7. Run from command line
 ```bash
 python3 run_dynamicme.py config_dynamicME.yaml
 ```
     - Results and config file saved to run_dynamicme_results/{project_name}/
 
-7. Visualize the results using `figures_dynamicme.ipynb`
+8. Visualize the results using `figures_dynamicme.ipynb`
     - Plot growth rate and yield
     - Plot biomass composition
     - Plot tracked metabolite concentrations (demo --> media composition)
@@ -37,18 +39,18 @@ python3 run_dynamicme.py config_dynamicME.yaml
     - Plot proteome distribution (ProteoMap/Voronoi)
 
 ### To Run stressME 
-8. Modify `config_stressME.yaml` as needed
+9. Modify `config_stressME.yaml` as needed
     - **Important:** Change project_name to avoid overwriting the demo
     - *Optional:* Modify stresses & substrates
 ```yaml
 project_name: 'demo' # change to avoid overwriting the demo results
 ```
 
-9. Run from command line
+10. Run from command line
 ```bash
 python3 run_stressme.py config_stressME.yaml
 ```
     - Results and config file saved to run_stressme_results/{project_name}/
 
-10. Visualize the results using `figures_stressme.ipynb`
+11. Visualize the results using `figures_stressme.ipynb`
     - Plot proteome distribution (ProteoMap/Voronoi)
