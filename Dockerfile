@@ -18,7 +18,11 @@ RUN apk --no-cache --force add \
     autoconf \
     automake \
     openssh \
-    bash
+    bash \
+    libxml2-dev \
+    json-c-dev \
+    libstdc++ \
+    libstdc++-dev
 
 # Set python and pip defaults to version 3
 RUN ln -sf python3 /usr/bin/python && ln -sf pip3 /usr/bin/pip
@@ -41,6 +45,37 @@ ENV LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 COPY dynamicme /opt/dynamicme
 WORKDIR /opt/dynamicme
 RUN python setup.py install
+
+# # Download and extract FreeSASA and Gemmi
+# WORKDIR /opt
+# RUN wget https://github.com/mittinatten/freesasa/archive/refs/tags/2.1.2.tar.gz -O freesasa-2.1.2.tar.gz && \
+#     wget https://github.com/project-gemmi/gemmi/archive/refs/tags/v0.5.7.tar.gz -O gemmi-0.5.7.tar.gz && \
+#     tar -xzf freesasa-2.1.2.tar.gz && \
+#     tar -xzf gemmi-0.5.7.tar.gz && \
+#     mkdir -p freesasa-2.1.2/third-party/gemmi && \
+#     cp -r gemmi-0.5.7/* freesasa-2.1.2/third-party/gemmi/
+
+# Build and install FreeSASA with mmCIF support
+# WORKDIR /opt/freesasa-2.1.2
+# RUN autoreconf -i && \
+#     ./configure && \
+#     sed -i 's/-lc++/-lstdc++/g' src/Makefile && \
+#     make && \
+#     make install
+
+# Clean up sources
+# WORKDIR /opt
+# RUN rm -rf freesasa-2.1.2* gemmi-0.5.7* 
+
+# Install MSMS (molecular surface calculation tool)
+# WORKDIR /opt
+# RUN wget https://ccsb.scripps.edu/msms/download/933/ -O msms.tar.gz && \
+#     tar -xzf msms.tar.gz && \
+#     find . -name "msms.x86_64Linux2.2.6.1" -exec cp {} /usr/local/bin/msms \; && \
+#     chmod +x /usr/local/bin/msms && \
+#     rm -rf msms* msms.tar.gz
+
+
 
 # Set working directory for your project
 WORKDIR /app

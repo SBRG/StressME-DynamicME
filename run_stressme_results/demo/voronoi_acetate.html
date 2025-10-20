@@ -17,10 +17,10 @@
 </head>
 <body>
 <div style="display: flex;">
-  <svg id="svg-931fae84a8d74d08bda41cc04c52a64f" width="800" height="800"></svg>
+  <svg id="svg-e247688605684543a73aba7d740b56d0" width="800" height="800"></svg>
   <div style="margin-left: 20px;">
     <h3>COG Categories</h3>
-    <ul style="list-style: none; padding: 0;" id="legend-931fae84a8d74d08bda41cc04c52a64f"></ul>
+    <ul style="list-style: none; padding: 0;" id="legend-e247688605684543a73aba7d740b56d0"></ul>
   </div>
 </div>
 
@@ -34,7 +34,7 @@
 
   treemap(root);
 
-  const svg = d3.select("#svg-931fae84a8d74d08bda41cc04c52a64f");
+  const svg = d3.select("#svg-e247688605684543a73aba7d740b56d0");
 
   // Draw cells
   svg.selectAll("path")
@@ -170,7 +170,7 @@
     "desc": "Unknown"
   }
 };
-  const legendContainer = d3.select("#legend-931fae84a8d74d08bda41cc04c52a64f");
+  const legendContainer = d3.select("#legend-e247688605684543a73aba7d740b56d0");
   Object.entries(cogColors).forEach(([letter, info]) => {
     const item = legendContainer.append("li").style("margin-bottom", "4px");
     item.append("span")
