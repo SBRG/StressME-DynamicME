@@ -1,20 +1,20 @@
 # Instructions:
 1. Clone or Download the Repository
 ```bash
-<<<<<<< HEAD
+
 git clone https://github.com/EdwardCatoiu/StressME-DynamicME
 ```
 2. From the root of the StressME-DynamicME folder (where the Dockerfile and new scripts are), build the docker image by running: 
-=======
+
 git clone https://github.com/arjunpatel96/StressME-DynamicME
 ```
 2. From the root of the cloned/unzipped folder (where the Dockerfile is), build the docker image by running: 
->>>>>>> 3190ad8f27ddd8d3064f3689385656d711f801b3
+
 ```bash
 docker build -t stressme_with_dynamicme .
 ```
 3. Still in the same folder/terminal, start the container with:
-<<<<<<< HEAD
+
 ```bash
 docker run -it -p 8888:8888 -v "$PWD":/app stressme_with_dynamicme
 ```
@@ -57,15 +57,12 @@ project_name: 'demo' # change to avoid overwriting the demo results
 10. Run from command line (/app #)
     - Results and config file saved to run_stressme_results/{project_name}/
 
-=======
->>>>>>> 3190ad8f27ddd8d3064f3689385656d711f801b3
+
 ```bash
 python3 run_stressme.py config_stressME.yaml
 ```
-<<<<<<< HEAD
 
 11. Visualize the results using `figures_stressme.ipynb`
     - Plot proteome distribution (ProteoMap/Voronoi) <img src="assets/voronoi_acetate.jpg" alt="Open new terminal" width="500"/>
 =======
 4. Open a browser and go to http://localhost:5000
->>>>>>> 3190ad8f27ddd8d3064f3689385656d711f801b3
