@@ -1,11 +1,11 @@
 # Instructions:
 1. Clone or Download the Repository
 ```bash
-
 git clone https://github.com/EdwardCatoiu/StressME-DynamicME
 ```
 2. From the root of the StressME-DynamicME folder (where the Dockerfile and new scripts are), build the docker image by running: 
 
+``` bash
 git clone https://github.com/arjunpatel96/StressME-DynamicME
 ```
 2. From the root of the cloned/unzipped folder (where the Dockerfile is), build the docker image by running: 
